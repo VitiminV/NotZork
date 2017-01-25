@@ -1,0 +1,7 @@
+		EmptyRoom	FindM1911Room
+		EmptyRoom		
+		EmptyRoom		
+GiantSpiderRoom	EmptyRoom	StartingRoom	EmptyRoom	FindKnifeRoom
+		FindGoldRoom		
+		EmptyRoom		
+		CultistRoom		
