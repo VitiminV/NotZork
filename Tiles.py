@@ -151,7 +151,8 @@ class FindM1911Room(LootRoom):
         agony. The feeling quickly subsides, and as you regain composure, fleeting glimpses of alien architecture and
         impossible geometry fade from your mind."""
 
-class LeaveCaveRoom(MapTile):
+
+class ExitRoom(MapTile):
     def intro_text(self):
         return """A bright red light catches your eye as you enter the room. It's an exit sign! You carefully make your
         way over to it, and push on the handle. It wont budge. You notice the sticker on the door that reads 'PULL', and

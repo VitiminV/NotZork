@@ -2,6 +2,7 @@
 		EmptyRoom		
 		EmptyRoom		
 GiantSpiderRoom	EmptyRoom	StartingRoom	EmptyRoom	FindKnifeRoom
-		FindGoldRoom		
 		EmptyRoom		
+		FindGoldRoom		
 		CultistRoom		
+		ExitRoom		
