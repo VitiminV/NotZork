@@ -26,6 +26,10 @@ TODO:
 
 -A start screen where you can choose some options before starting a game.
 
+WIP:
+
+- Generating an ascii drawing of the map in console
+
 
 RANDOM SCRIBBLING OF IDEAS:
 
