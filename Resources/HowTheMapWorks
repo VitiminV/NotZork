@@ -1,0 +1,8 @@
+ATTENTION: HAND MADE MAPS ARE NECESSARY, PROCEDUAL MAP GENERATION IS NOT YET IMPLEMENTED
+
+The map is just a text file of tab seperated strings. World.py will split them by tabs and lines, a tabbed space being an empty room,
+and adjacent rooms being seperated with a space.
+
+The easiest way to make a map, is to use MS Excel, and fill the cells with the Class names of the different types of rooms found in 
+Tiles.py, and then export the file as "Text (Tab delimited)". I know this is pretty clunkey, but it works, and I'm gonna make a
+better map system later. (thats what they all say)
