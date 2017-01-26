@@ -1,4 +1,4 @@
-from Objects import Items, Monsters, Actions, World
+import Items, Monsters, Actions, World
 
 
 class MapTile:
@@ -121,6 +121,7 @@ class CultistRoom(EnemyRoom):
         else:
             return """The now lifeless eyes of the once crazed cultist now stare blankly into space."""
 
+
 class FindKnifeRoom(LootRoom):
     def __init__(self, x, y):
         super().__init__(x, y, Items.Knife())
@@ -141,7 +142,7 @@ class FindGoldRoom(LootRoom):
 
 class FindM1911Room(LootRoom):
     def __init__(self, x, y):
-        super().__init__(x, y, Items.M1911)
+        super().__init__(x, y, Items.M1911())
 
     def intro_text(self):
         return """Upon entering the room, you quickly notice a corpse. As you move to investigate, you can see large

@@ -1,4 +1,5 @@
-from Objects.Player import Player
+from Player import Player
+
 
 class Action():
     def __init__(self, method, name, hotkey, **kwargs):

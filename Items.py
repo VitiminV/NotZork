@@ -4,17 +4,19 @@ class Item():
         self.name = name
         self.description = description
         self.value = value
+
     def __str__(self):
         return "{}\n=====\n{}\nValue: {}\n".format(self.name, self.description, self.value)
+
 
 class Gold(Item):
     """A very unfortunate schmelting accident..."""
     def __init__(self, amt):
         self.amt = amt
-        super().__init__ (name="Gold",
-                          description="A round gold coin with a faded figure, and some alien symbols "
-                                      "stamped on both sides.".format(str(self.amt)),
-                          value=self.amt)
+        super().__init__(name="Gold",
+                         description="A round gold coin with a faded figure, and some alien symbols "
+                                      "stamped on both sides.",
+                         value=self.amt)
 
 
 class Weapon(Item):
@@ -25,7 +27,8 @@ class Weapon(Item):
         super().__init__(name, description, value)
 
     def __str__(self):
-        return "{}\n=====\n{}\nValue: {}\nDamage: {}\nDamage Type: {}".format(self.name, self.description, self.value, self.damage, self.damageType)
+        return "{}\n=====\n{}\nValue: {}\nDamage: {}\nDamage Type: {}".format(self.name, self.description, self.value,
+                                                                              self.damage, self.damageType)
 
 
 class Rock(Weapon):
@@ -45,7 +48,7 @@ class Knife(Weapon):
                          description="A small, cheap kitchen knife. Barely more effective than a rock.",
                          value=10,
                          damage=10,
-                         damageType="piercing")
+                         damageType="Piercing")
 
 
 class M1911(Weapon):
@@ -58,7 +61,7 @@ class M1911(Weapon):
                                      "them",
                          value=50,
                          damage=18,
-                         damageType="ballistic")
+                         damageType="Ballistic")
 
 
 class Fists(Weapon):

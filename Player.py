@@ -1,11 +1,10 @@
-from Objects import Items, World
-from Objects.Items import Fists
+import Items, World
 import random
 
 
 class Player():
     def __init__(self):
-        self.inventory = [Items.Rock(), Items.Gold(15)]
+        self.inventory = [Items.Rock(), Items.Gold(15), Items.Fists()]
         self.equipped = Items.Fists()
         self.hp = 100
         self.location_x, self.location_y = World.starting_position
@@ -17,7 +16,10 @@ class Player():
     def print_inventory(self):
         i = 1
         for item in self.inventory:
-            print(i, item, '\n')
+            if hasattr(item, 'damage'):
+                print(i, Items.Weapon.__str__(item), '\n')
+            else:
+                print(i, Items.Item.__str__(item), '\n')
             i += 1
 
     def move(self, dx, dy):
@@ -39,18 +41,21 @@ class Player():
 
     def equip(self):
         flag = 0
+        print('\n')
+        for item in self.inventory:
+            if hasattr(item, 'damage'):
+                print("{}".format(item.name))
         selected = input('equip which weapon?:')
-        for i in self.inventory:
-            print()
-            if i.name == selected:
-                self.equipped = i
-                print("{} equipped".format(self.equipped.name))
+        for item in self.inventory:
+            if item.name == selected:
+                self.equipped = item
+                print("\n{} equipped".format(self.equipped.name))
+                flag = 1
                 break
-            else:
-                flag += 1
-
-        if flag != 0:
-            print("You don't have that in your inventory")
+        if flag == 0:
+            print("You don't have that in your inventory\n")
+        else:
+            print("\n")
 
     def attack(self, enemy):
         print("You attack the {} with your {}.".format(enemy.name, self.equipped.name))

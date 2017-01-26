@@ -1,9 +1,8 @@
-from Objects import World, Player
-from Objects.Player import Player
+import World, Player
+from Player import Player
 
 
-
-def Play():
+def play():
     # Load the world, create a player, initialize player to the starting room, and display text
     World.load_tiles()
     player = Player()
@@ -28,4 +27,4 @@ def Play():
 
 
 if __name__ == '__main__':
-    Play()
+    play()
