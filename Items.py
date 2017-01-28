@@ -135,3 +135,23 @@ class CultistsRobes(Armour):
                          damageReduction=2,
                          damageAffinity='Magic',
                          damageVulnerability='Piercing')
+
+class NoArmour(Armour):
+    """Bare as the day you were born"""
+    def __init__(self):
+        super().__init__(name="None",
+                         description="You Shouldn't be seeing this in game. pls leme know on github.",
+                         value=0,
+                         damageReduction=0,
+                         damageAffinity='None',
+                         damageVulnerability='None')
+
+
+class ShoggothTentacle(Weapon):
+    """Don't get got."""
+    def __init__(self):
+        super().__init__(name="Shoggoth Tentacle",
+                         description="You Shouldn't be seeing this in game. pls leme know on github.",
+                         value=0,
+                         damage=14,
+                         damageType='Piercing')

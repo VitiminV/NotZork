@@ -26,3 +26,11 @@ class Cultist(Enemy):
                          hp=30,
                          weapon=Items.CultistDagger(),
                          armour=Items.CultistsRobes())
+
+
+class Shoggoth(Enemy):
+	def __init__(self):
+		super().__init__(name="Shoggoth",
+		                 hp=60,
+		                 weapon=Items.ShoggothTentacle(),
+		                 armour=Items.NoArmour())
