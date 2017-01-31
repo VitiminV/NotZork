@@ -25,4 +25,4 @@ def get_dimensions():
 	with open('resources/map.txt', 'r') as f:
 		rows = f.readlines()
 	x_max = len(rows[0].split('\t'))  # Assumes all rows have the same number of tabs
-	return (x_max, len(rows))
+	return x_max, len(rows)
