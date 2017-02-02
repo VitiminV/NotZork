@@ -68,3 +68,11 @@ class Equip2(Action):
 class ViewEquipped(Action):
 	def __init__(self):
 		super().__init__(method=Player.print_equipped, name='View equipped', hotkey='r')
+
+class Die(Action):
+	def __init__(self):
+		super().__init__(method=Player.die, name='die', hotkey='')
+
+class DieToTrap(Action):
+	def __init__(self):
+		super().__init__(method=Player.die, name='die to trap', hotkey='')

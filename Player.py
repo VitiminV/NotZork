@@ -1,4 +1,4 @@
-import Items, World
+import Items, World, Traps
 import random
 
 
@@ -112,3 +112,11 @@ class Player():
 		available_rooms = tile.adjacent_moves()
 		r = random.randint(0, len(available_rooms) - 1)
 		self.do_action(available_rooms[r])
+
+	def die(self):
+		print("You have died. RIP: you.")
+		self.hp = -1
+
+	def die_to_trap(self, trap):
+			print("you have died to a: {}.".format(trap.name))
+			self.hp = -1

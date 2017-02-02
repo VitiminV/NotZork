@@ -42,3 +42,5 @@ RANDOM SCRIBBLING OF IDEAS:
 -maybe an in console character creator (custom stats. point buy system, rolls, I dunno yet)
 
 -cheat commands
+
+-Trap Rooms requiring a torch item to navigate.

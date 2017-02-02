@@ -1,4 +1,4 @@
-import Items, Monsters, Actions, World
+import Items, Monsters, Actions, World, Traps
 from Player import Player
 
 
@@ -106,6 +106,15 @@ class EnemyRoom(MapTile):
 			return MapTile.available_actions(self)
 
 
+class TrapRoom(MapTile):
+
+	def __init__(self, x, y, trap):
+		self.trap = trap
+		super().__init__(x, y)
+
+
+
+
 class EmptyRoom(MapTile):
 	def intro_text(self):
 		return """The walls and bookshelves stare silently back at you. This room is mercifully, empty."""
@@ -113,6 +122,7 @@ class EmptyRoom(MapTile):
 	def modify_player(self, player):
 		"""room has no effect on player"""
 		pass
+
 
 
 class GiantSpiderRoom(EnemyRoom):
@@ -138,6 +148,21 @@ class CultistRoom(EnemyRoom):
 			he attacks."""
 		else:
 			return """The now lifeless eyes of the once crazed cultist now stare blankly into space."""
+
+
+class ChortRoom(EnemyRoom):
+	def __init__(self, x, y):
+		super().__init__(x, y, Monsters.Chort())
+
+	def intro_text(self):
+		if self.enemy.isAlive():
+			return """A rancid and sour smell permeates the air. In the corner of the room,
+			you hear an arrhythmic snorting and wheezing. An abomination stepped from the shadows, the light revealing
+			a tall emaciated figure with a hairless boar head.Uneven horns grew out of weeping soars, with pus crusted
+			down the creatures skull.The lashing, pronged tail reminded you of a common folk myth,
+			a chort, devil of fairs. With a squeal, it raised a three-pronged whip and charges."""
+		else:
+			return """Viscous foam and blood flecks the creatures mouth. Evidence of it's last wheezing squeal."""
 
 
 class FindKnifeRoom(LootRoom):

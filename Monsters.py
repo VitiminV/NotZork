@@ -34,3 +34,11 @@ class Shoggoth(Enemy):
 		                 hp=60,
 		                 weapon=Items.ShoggothTentacle(),
 		                 armour=Items.NoArmour())
+
+
+class Chort(Enemy):
+	def __init__(self):
+		super().__init__(name="Chort",
+		                 hp=40,
+		                 weapon=Items.ChortWhip(),
+		                 armour=Items.NoArmour())

@@ -8,6 +8,13 @@ class Item():
     def __str__(self):
         return "{}\n=====\n{}\nValue: {}\n".format(self.name, self.description, self.value)
 
+class Torch(Item):
+	"""To see in... 'Advanced Darkness'..."""
+	def __init__(self):
+		super().__init__(name="Torch",
+		                 description="TODO: HAVE GIRLFRIED WRITE",
+		                 )
+
 
 class Gold(Item):
     """A very unfortunate schmelting accident..."""
@@ -155,3 +162,13 @@ class ShoggothTentacle(Weapon):
                          value=0,
                          damage=14,
                          damageType='Piercing')
+
+
+class ChortWhip(Weapon):
+	"""kinky"""
+	def __init__(self):
+		super().__init__(name='Chort Whip',
+		                 description="You Shouldn't be seeing this in game. pls leme know on github.",
+		                 value=0,
+		                 damage=9,
+		                 damageType='Bludgeoning')
